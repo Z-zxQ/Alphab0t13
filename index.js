@@ -5791,6 +5791,13 @@ break
 				   jds.push(C1.jid)
 				   mentions(D1, jds, true)
 				   break
+		case 'exif':
+             if (!isOwner) return  reply(mess.only.owner)
+             if (!q) return reply(mess.wrongFormat)
+             if (!arg.split('|')) return reply(`Penggunaan ${prefix}exif nama|author`)
+             exif.create(arg.split('|')[0], arg.split('|')[1])
+             reply('sukses')
+             break
 				default:
 				
 if(subscribezeeoneofc == 'qr_gopay1'){
